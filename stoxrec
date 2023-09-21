@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STOXREC</title>
+    <!-- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet"> -->
+    <style>
+    #navbar {
+        flex-direction: column;
+    }
+    
+    #navbar ul li a{
+        font-size: 1rem;
+        padding: 0px 7px;
+        padding-bottom: 8px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /* Home section */
+    #home{
+        height: 370px; 
+        padding: 3px 28px;
+    }
+    
+    #home::before{
+        height: 480px; 
+    }
+    
+    #home p{
+        font-size: 13px;
+    }
+    
+    /* Services section  */
+    #services{
+        flex-direction: column;
+    }
+    
+    #services .box { 
+        padding: 14px;
+        margin: 2px 0px; 
+        margin-bottom: 20px;
+    }
+    
+    /* Clients section */
+    #clients{
+        flex-wrap: wrap;
+    }
+    
+    #clients img{
+        width: 66px;
+        padding: 6px;
+        height: auto;
+    }
+    
+    /* Contact us section */
+    #contact-box form{
+        width:80%;
+    }
+    /* Footer */
+    
+    /* Utility classes */
+    .h-primary{
+        font-size:22px;
+    }
+    .btn{
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    /* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('banner-bg.jpg') no-repeat center center/cover;
+    height: 570px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services Section */
+#services{
+    margin: 18px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid rgb(20, 20, 20);
+    padding: 25px;
+    margin: 2px 6px;
+    border-radius: 28px;
+    background: #e0e4e5;
+    margin-bottom: 20px;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Clients Section */
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url("sign-up-form-button-graphic-concept_53876-133556.avif");
+ background-repeat: none;
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.3;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(15, 15, 15); 
+        width: 40%;
+        height: 300px;
+        margin-left:450px;
+        border-radius: 14px;
+        margin-top: -20px;
+        /* color: rgb(238, 241, 244); */
+}
+
+/* client sections */
+#client-sections{ 
+    position: relative;
+}
+
+#client-sections::before{
+ content: "";
+ position: absolute;
+ background: url("register-now-application-information-concept_53876-125163.avif");
+ background-repeat: none;
+ background-size: cover;
+ width: 100%;
+ height: 100%;
+  z-index: -1; 
+ opacity: 0.3;
+ margin-top: 10px;
+}
+
+/* .client-item{
+    padding: 34px;
+} */
+
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url("aerial-view-business-team_53876-124515.avif") no-repeat ;
+    background-size:cover;
+    padding: 5px;
+    margin-top: 20px;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(81, 82, 83);
+    color: black;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+.form-group{
+            margin: 30px;
+            color: aliceblue;
+        }
+        .form-group input {
+            font-family: 'Georgia';
+            text-align: center;
+            display: block;
+            width: 300px;
+            padding: 1px;
+            border: 2px solid black;
+            margin: 11px auto;
+            font-size: 19px;
+            border-radius: 8px;
+            background-color: rgb(255, 255, 255, 0.3);
+            color: rgb(244, 238, 238);
+            
+        }
+
+        /* .container button {
+            display: block;
+            width: 33%;
+            margin: 20px auto;
+        } */
+
+        .btn1 {
+            font-family: 'Georgia';
+            margin-left:140px; 
+            color: rgb(239, 236, 236);
+            background-color: rgb(255, 255, 255, 0.3);
+            text-decoration:none;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 30%;
+        }
+        .btn2{
+            font-family: 'Georgia';
+            margin-left:230px; 
+            color: rgb(239, 236, 236);
+            background-color: rgb(255, 255, 255, 0.3);
+            text-decoration:none;
+            padding: 4px 14px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            width: 30%;
+        }
+        .btn1 a{
+            text-decoration: none;
+            color: rgb(90, 88, 88);
+        }
+
+        .btn1:hover {
+            background-color: rgb(226, 223, 223);
+            text-align: center;
+        }
+        .r{
+            margin-left:70px;
+            color:white;
+        }
+        body{
+            background-color: rgb(79, 78, 78);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <!-- <div id="logo">
+            <img src="logo1.jpg">
+        </div> -->
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">About Us</a></li>
+            <li class="item"><a href="#">Stocks</a></li>
+            <li class="item"><a href="news.html">News</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">Welcome to STOXREC.COM</h1>
+        <p>Unlock the potential of your financial future with the captivating world of stocks! </p>
+        <button class="btn"><a href="#client-section">JOIN NOW</a></button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center"><u>Our Missions</u></h1>
+        <div id="services">
+            <div class="box">
+                <img src="download (1).jpg" alt="">
+                <h2 class="h-secondary center">Market Analysis</h2>
+                <p class="center"> Investors can analyze historical trends, 
+                    patterns, and correlations among stocks, sectors, or indices. 
+                    Visual representations like candlestick charts, line charts, and bar charts 
+                    help users quickly identify price movements.</p>
+            </div>
+            <div class="box">
+                <img src="download (2).jpg" alt="">
+                <h2 class="h-secondary center">News and Event Impact</h2>
+                <p class="center">Stock visualizers often integrate news feeds and event tracking, allowing investors to understand how news and events impact stock prices.</p>
+            </div>
+            <div class="box">
+                <img src="10-100676_stock-market-icon-png-transparent-png.png" alt="">
+                <h2 class="h-secondary center">Comparative Analysis</h2>
+                <p class="center">Users can compare the performance of multiple stocks, sectors, or indices on a single platform, aiding in decision-making.</p>
+            </div>
+            <div class="box">
+                <img src="analysis-stock-market-black-icon-on-white-vector-31617379.jpg" alt="">
+                <h2 class="h-secondary center">Techincal and Predictive Analysis</h2>
+                <p class="center">Technical indicators, such as moving averages, Relative Strength Index (RSI), and MACD, are often displayed graphically to assist in making technical analysis-based decisions.Stock forecasters use historical data and advanced algorithms to predict future stock prices. This can help investors identify potential buying or selling opportunities.</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">JOIN US</h1>
+        <div id="clients">
+            <form action="#home">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Email Id" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your password" required>
+                </div>
+                <button class="btn1"><a href="#home">Sign In</a></button>
+            </form>
+            <div class="r">
+                <a href="#client-sections">Dont have an account?REGISTER ONE</a>
+            </div>
+        </div>
+
+    </section>
+    <section id="client-sections">
+        <h1 class="h-primary center">REGISTER HERE</h1>
+        <div id="clients">
+            <form action="#home">
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Enter your Email Id" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" placeholder="Set your password" required>
+                </div>
+                <button class="btn1"><a href="#home">Register</a></button>
+            </form>
+            <div class="r">
+                <a href="#client-section">Already having an account?Sign IN</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Remarks: </label>
+                    <textarea name="message" id="message" cols="30" rows="10" style="background-color: grey;"></textarea>
+                </div>
+                <button class="btn2"><a href="#">SUBMIT</a></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.STOXREC.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
